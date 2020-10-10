@@ -24,6 +24,12 @@ a
   color: white;
 }
 
+.current
+{
+  background: var(--primary-color);
+  color: black;
+}
+
 
 .yellow
 {
@@ -138,8 +144,17 @@ a
 
 /* Homepage header footer*/
 
+#page-header,
+#page-footer
+{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
 #social
 {
+  
   display:  flex;
   justify-content: center;
   align-items: center;
@@ -159,15 +174,17 @@ a
 
 #page-header #navlink
 {
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 #page-header #navlink a
 {
-  padding: 1.5rem 3rem;
-  font-size: 1.3rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
   border-bottom: transparent 5px solid;;
 }
 
