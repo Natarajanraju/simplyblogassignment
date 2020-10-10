@@ -1,0 +1,14 @@
+#login .right
+{
+  display: none;
+}
+
+#login .left
+{
+  width: 100vw;
+}
+
+#login::before
+{
+  width: 100%;
+}
