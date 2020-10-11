@@ -8,7 +8,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./mobile.css" media="screen and (max-width:768px)">
-
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
   <title>Gamerhub | Homepage</title>
 </head>
@@ -27,14 +27,81 @@
       </div>
       <nav id="navlink">
         <a href="#" class="current">Home</a>
-        <a href="#">Blogs</a>
+        <a href="#blog">Blogs</a>
         <a href="post.html">Post</a>
         <a href="#">Logout</a>
       </nav>
     </div>
   </header>
 
-  <section id="welcome"></section>
+  <section id="welcome">
+    <div class="container-md welcome text-center">
+      <h1 class="text-white font-weight-bold"><span class="text-dark">Welcome to</span> Gamer<span
+          class="text-dark">club</span></h1>
+      <p class=" font-weight-bold">Your one stop destination for Gaming</p>
+      <a href="#blog" class="btn btn-hover btn-dark p-3 mt-3"><i class="fas fa-chevron-down"> Trending Blogs</i></a>
+    </div>
+  </section>
+
+  <section id="blog" class="px-3 py-5">
+    <div class="container-md w-100">
+      <h1 class="mb-5 text-center">Latest Blog posts</h1>
+      <div class="blog d-flex flex-column justify-content-center">
+
+        <!-- Article 1 -->
+        <article class="card mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-4 card-img article1">
+
+            </div>
+            <div class="col-md-8">
+              <div class="card-header d-flex align-items-center">
+                <img src="./img/blog/article1_user.jpg" alt="user1"
+                  style="border-radius: 50%; height: 100px; width: 100px; border: var(--primary-color) 5px solid;">
+                <p class="blog-user text-muted">Jessica Miller</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">A beginner's guide to RGB lighting your PC</h5>
+                <p class="card-text">It's not that hard to give your PC a little LED flair, but you'll need to pick the
+                  right components to coordinate a killer look..</p>
+                <a href=" https://www.pcgamer.com/a-beginners-guide-to-rgb-lighting-your-pc/" class="text-dark">
+                  <p class="card-text">Refer here..</p>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="card mb-3">
+          <div class="row flex-row-reverse no-gutters">
+            <div class="col-md-4 card-img article2">
+
+            </div>
+            <div class="col-md-8">
+              <div class="card-header d-flex align-items-center">
+                <img src="./img/blog/article1_user.jpg" alt="user1"
+                  style="border-radius: 50%; height: 100px; width: 100px; border: var(--primary-color) 5px solid;">
+                <p class="blog-user text-muted">Jessica Miller</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">A beginner's guide to RGB lighting your PC</h5>
+                <p class="card-text">Nvidia's teasing a big event later this month. It's a likely possibility that the
+                  new RTX 3000-series cards will be unveiled to celebrate the 21st anniversary of GeForce. The new cards
+                  are expected to provide a huge bump in performance compared to Turing... and cost even more. </p>
+                <a href=" https://www.pcgamer.com/a-beginners-guide-to-rgb-lighting-your-pc/" class="text-dark">
+                  <p class="card-text">Refer here..</p>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+
+        </article>
+      </div>
+    </div>
+
+
+  </section>
 
 
   <footer id="page-footer" class="bg-dark border-u3 py-3 text-white">

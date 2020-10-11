@@ -24,12 +24,40 @@ a
   color: white;
 }
 
+.blog-user
+{
+  margin-left: 2rem;
+}
+img
+{
+  width: 100%;
+  object-fit: no-repeat center center/cover;
+}
+
+h1
+{
+  line-height: 1.3;
+  font-size: 4rem;
+  padding: 1rem 0;
+}
+
+p
+{
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 .current
 {
   background: var(--primary-color);
   color: black;
 }
 
+.card-text
+{
+  font-size: 1rem;
+}
 
 .yellow
 {
@@ -207,20 +235,20 @@ a
 {
   display: flex;
   justify-content: space-around;
-  
+  width: 100%;
+  z-index:10;    
 }
 
 #page-header
 {
   position: fixed;
-  width: 100%;
-  top: 0;
+  top:0;
 }
 
 #social
 {
   
-  display:  flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -264,15 +292,89 @@ a
 }
 
 /* Homepage welcome */
+
+
+#welcome *
+{
+  z-index: 2
+}
+
 #welcome
 {
-  height: 90vh;
+  height: 100vh;
+  position: relative;    
+  background-color: rgba(255, 174, 0,0.65);
+  
+  
+}
+
+#welcome::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./img/homepage1.jpg') no-repeat center center/cover;
+  z-index: -1;
+
+}
+
+#welcome .welcome
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Trending blog posts */
+
+#blog
+{
+  position: relative;
+}
+
+#blog article:nth-child(odd)
+{
+  border-left: var(--primary-color) 10px solid;
+  position: relative;
+}
+
+#blog article:nth-child(even)
+{
+  border-right: var(--primary-color) 10px solid;
+}
+
+#blog::before
+{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+#blog::after
+{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  top: 0;
+  right: 0;
+  background-color: black;
+  padding: 0.5rem;
 }
 
 
 
-
-
-
-
+#blog .article1{  background: url('./img/blog/article1.jpg') no-repeat center center/cover;}
+#blog .article2{  background: url('./img/blog/article2.webp') no-repeat center center/cover;}
 
