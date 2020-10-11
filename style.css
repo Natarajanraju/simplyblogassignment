@@ -26,7 +26,7 @@ a
 
 .blog-user
 {
-  margin-left: 2rem;
+  margin: 0 2rem;
 }
 img
 {
@@ -48,6 +48,10 @@ p
   line-height: 1.5;
 }
 
+.nav-transparent
+{
+  background: rgba(0,0,0, 0.5);
+}
 .current
 {
   background: var(--primary-color);
@@ -377,4 +381,6 @@ p
 
 #blog .article1{  background: url('./img/blog/article1.jpg') no-repeat center center/cover;}
 #blog .article2{  background: url('./img/blog/article2.webp') no-repeat center center/cover;}
+#blog .article3{  background: url('./img/blog/article3.webp') no-repeat center center/cover;}
+#blog .article4{  background: url('./img/blog/article4.jpg') no-repeat center center/cover;}
 
