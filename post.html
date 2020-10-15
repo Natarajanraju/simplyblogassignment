@@ -8,28 +8,191 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./mobile.css" media="screen and (max-width:768px)">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
   <title>Gamerhub | Create Blog Post</title>
 </head>
 
 <body>
 
+  <!-- Nav Bar -->
+
   <header id="page-header" class="bg-dark border-3">
     <div class="text-center align-self-center p-3">
       <a href="index.html"><i class="fas fa-gamepad text-light fa-2x"> Gamer<span class="yellow">Club</span></i></a>
     </div>
-    <div id="navlink">
-      <a href="index.html">Home</a>
-      <a href="index.html#">Blogs</a>
-      <a href="post.html" class="current">Post</a>
-      <a href="#">Logout</a>
+    <div id="toggler-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger bg-dark">
+        <div></div>
+      </div>
+      <nav id="navlink">
+        <a href="./index.html" id="home">Home</a>
+        <a href="./index.html#blog" id="blog-link">Blogs</a>
+        <a href="post.html" class="current">Post</a>
+        <a href="./login.html">Logout</a>
+      </nav>
     </div>
   </header>
 
-  <section id="post"></section>
+  <!-- Post Section -->
+
+  <section id="post">
+    <div class="container-md pt-5 mt-5">
+      <h1>Manage Posts</h1>
+      <div class="post_profile card-header border-r3 mb-3">
+        <div class="d-flex align-items-center text-center justify-content-around">
+          <img src="./img/blog/profiler.jpg" alt="profile"
+            style="border-radius: 50%; height: 75px; width: 75px; border: black 5px solid;">
+          <p>Welcome Natarajan</p>
+          <span class="text-muted text-right">Total Posts: 5<br>Total Likes: 1024<br>Total Unlikes: 323<br>Last online:
+            10th
+            October 2020, 13:12:00 IST </span>
+        </div>
+      </div>
+      <div id="post_manage">
+        <input type="checkbox" class="juggler">
+        <div class="indicator rounded-pill">
+          <div class="indicator1"></div>
+        </div>
+
+        <div class="card-header d-flex align-items-center justify-content-around text-center">
+
+          <h5 id="create-post" class="card-title create-post w-50" style="border-right: black 5px dotted">
+            Create Post
+          </h5>
+
+          <h5 id="manage-post" class="card-title manage-post w-50">
+            Manage Post
+
+          </h5>
+        </div>
+        <!-- Create post -->
+
+        <div id="create_card" class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="title" class="font-weight-bold">Article Title:</label>
+              <input type="text" class="form-control" placeholder="Game">
+            </div>
+            <div class="form-group">
+              <label for="article" class="font-weight-bold">Article Content:</label>
+              <textarea class="form-control" placeholder="Your information to the World goes here!" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="file" class="font-weight-bold">Article Media:</label>
+              <input type="file" class="form-control-file" id="file">
+              <span class="text-muted">Please restrict file size to 10MB</span>
+            </div>
+            <a href="" class="btn btn-hover btn-dark col-md-6 d-block mx-auto border-r3">Post</a>
+          </form>
+        </div>
+
+        <!-- Accordion style Manage post -->
+
+        <div id="manage_card" class="pt-3 pb-3">
+          <div class="accordion" id="accordion_post">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    I Love AMD Graphic Cards
+                  </button>
+                </h2>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_post">
+                <div class="card-body">
+                  <article class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-md-4 card-img article6">
+
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-header d-flex flex-row-reverse align-items-center">
+                          <img src="./img/blog/profiler.jpg" alt="me"
+                            style="border-radius: 50%; height: 100px; width: 100px; border: black 5px solid;">
+                          <p class="blog-user text-muted">Natarajan Raju</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">I Love AMD Graphic Cards</h5>
+                          <p class="card-text">I recently bought a AMD based system... Was thinking to go with
+                            NVIDIA
+                            Initially.</p>
+
+                          <p class="card-text">Never expexted such a bliss... Checkout AMD Systems</p>
+                          </a>
+                          <p class="card-text"><small class="text-muted">Last updated 1 day ago</small></p>
+                        </div>
+                        <div class="card-footer text-center d-flex justify-content-around">
+                          <i class="fas fa-thumbs-up text-primary">33</i>
+                          <i class="fas fa-thumbs-down text-danger">1</i>
+                          <i class="fas fa-comment-alt yellow">4</i>
+                          <i class="fas fa-trash-alt"></i>
+                          <i class="fas fa-share"></i>
+                        </div>
+                      </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Why I hate consoles
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_post">
+                <div class="card-body">
+                  <article class="card mb-3">
+                    <div class="row flex-row-reverse no-gutters">
+                      <div class="col-md-4 card-img article7">
+
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-header d-flex align-items-center">
+                          <img src="./img/blog/profiler.jpg" alt="me"
+                            style="border-radius: 50%; height: 100px; width: 100px; border: black 5px solid;">
+                          <p class="blog-user text-muted">Natarajan Raju</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Why I hate consoles</h5>
+                          <p class="card-text">Am always a PC fan boy and played in consoles rarely. I always get a
+                            kingly feel when handling
+                            PC and peasant feel when playing console.
+                          </p>
+
+                          <p class="card-text">PC performance is unmatched with consoles. Dont waste your money in
+                            consoles!</p>
+                          </a>
+                          <p class="card-text"><small class="text-muted">Last updated 5 days ago</small></p>
+                        </div>
+                        <div class="card-footer text-center d-flex justify-content-around">
+                          <i class="fas fa-thumbs-up text-primary">133</i>
+                          <i class="fas fa-thumbs-down text-danger">21</i>
+                          <i class="fas fa-comment-alt yellow">41</i>
+                          <i class="fas fa-trash-alt"></i>
+                          <i class="fas fa-share"></i>
+                        </div>
+                      </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-  <footer id="page-footer" class="bg-dark border-u3 py-3 text-white">
+  <!-- Footer section -->
+
+  <footer id="page-footer" class="bg-dark border-u3 py-3 text-white footer">
     <div class="text-center pt-2 pb-2">
       <h5>Gamerclub, &copy; All Rights reserved</h2>
     </div>
@@ -38,9 +201,22 @@
       <a href="https://youtube.com"><i class="fab fa-youtube youtube fa-2x"></i></a>
       <a href="https://twitter.com"><i class="fab fa-twitter twitter fa-2x"></i></a>
     </div>
-
-
   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,6 +235,30 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/9700a5577c.js" crossorigin="anonymous"></script>
+
+  <!-- Transparent Nav Bar & Current Nav link background switch -->
+
+  <script>
+
+    const navBar = document.getElementById('page-header');
+
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navBar.classList.remove('bg-dark');
+        navBar.classList.add('nav-transparent');
+
+      }
+
+      else {
+
+        navBar.classList.add('bg-dark');
+        scrolled = false;
+
+      }
+    };
+  </script>
 </body>
 
 </html>
