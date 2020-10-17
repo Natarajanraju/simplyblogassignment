@@ -210,7 +210,7 @@ p
 #create_card .form-group textarea
 {
   border-width: 0px;
-  border-bottom: 4px transparent solid;
+  border-bottom: 2px transparent solid;
   transition: all 0.5s ease-in-out;
   outline-color: var(--primary-color);
 }
@@ -221,7 +221,7 @@ p
 {
   border-width: 100%;
   box-shadow: none;
-  border-bottom: 4px black solid !important;    
+  border-bottom: 2px black solid !important;    
   transition: all 0.5s ease;
 }
 
