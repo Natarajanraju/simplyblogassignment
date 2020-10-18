@@ -372,8 +372,8 @@ p
 }
 
 #blog .article1{  background: url('./img/blog/article1.jpg') no-repeat center center/cover;}
-#blog .article2{  background: url('./img/blog/article2.webp') no-repeat center center/cover;}
-#blog .article3{  background: url('./img/blog/article3.webp') no-repeat center center/cover;}
+#blog .article2{  background: url('./img/blog/article2.jpg') no-repeat center center/cover;}
+#blog .article3{  background: url('./img/blog/article3.jpg') no-repeat center center/cover;}
 #blog .article4{  background: url('./img/blog/article4.jpg') no-repeat center center/cover;}
 
 
@@ -395,7 +395,7 @@ p
   border: var(--primary-color) 2px solid;
 }
 
-#manage_card .article6{  background: url('./img/blog/article6.webp') no-repeat center center/cover;}
+#manage_card .article6{  background: url('./img/blog/article6.jpg') no-repeat center center/cover;}
 #manage_card .article7{  background: url('./img/blog/article7.jpg') no-repeat center center/cover;}
 
 
