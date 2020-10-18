@@ -73,18 +73,23 @@
           <form>
             <div class="form-group">
               <label for="title" class="font-weight-bold">Article Title:</label>
-              <input type="text" class="form-control" placeholder="Game">
+              <input type="text" class="form-control" placeholder="What's this post about " id="articleTitle">
+              <span class="text-danger" id="postTitleErrorMessage"></span>
             </div>
             <div class="form-group">
               <label for="article" class="font-weight-bold">Article Content:</label>
-              <textarea class="form-control" placeholder="Your information to the World goes here!" rows="5"></textarea>
+              <textarea class="form-control" id="articleContent" placeholder="Your information to the World goes here!"
+                rows="5"></textarea>
+              <span class="text-danger" id="postContentErrorMessage"></span>
             </div>
             <div class="form-group">
               <label for="file" class="font-weight-bold">Article Media:</label>
               <input type="file" class="form-control-file" id="file">
               <span class="text-muted">Please restrict file size to 10MB</span>
             </div>
-            <a href="" class="btn btn-hover btn-dark col-md-6 d-block mx-auto border-r3">Post</a>
+            <input type="button" class="btn btn-hover btn-dark col-md-6 d-block mx-auto border-r3" value="Post"
+              onClick="validatePost()"></input>
+            <input type="reset" value="Reset" class="btn btn-hover btn-dark mt-3 col-md-6 d-block mx-auto border-r3">
           </form>
         </div>
 
@@ -95,7 +100,7 @@
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                  <button class="btn btn-link btn-block text-left text-dark" type="button" data-toggle="collapse"
                     data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     I Love AMD Graphic Cards
                   </button>
@@ -104,7 +109,7 @@
 
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_post">
                 <div class="card-body">
-                  <article class="card mb-3">
+                  <article class="card mb-3 border-r3">
                     <div class="row no-gutters">
                       <div class="col-md-4 card-img article6">
 
@@ -128,7 +133,7 @@
                         <div class="card-footer text-center d-flex justify-content-around">
                           <i class="fas fa-thumbs-up text-primary">33</i>
                           <i class="fas fa-thumbs-down text-danger">1</i>
-                          <i class="fas fa-comment-alt yellow">4</i>
+                          <i class="fas fa-comment-alt">4</i>
                           <i class="fas fa-trash-alt"></i>
                           <i class="fas fa-share"></i>
                         </div>
@@ -140,15 +145,15 @@
             <div class="card">
               <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="btn btn-link btn-block text-left text-dark collapsed" type="button"
+                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Why I hate consoles
                   </button>
                 </h2>
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_post">
                 <div class="card-body">
-                  <article class="card mb-3">
+                  <article class="card mb-3 border-l3">
                     <div class="row flex-row-reverse no-gutters">
                       <div class="col-md-4 card-img article7">
 
@@ -174,7 +179,7 @@
                         <div class="card-footer text-center d-flex justify-content-around">
                           <i class="fas fa-thumbs-up text-primary">133</i>
                           <i class="fas fa-thumbs-down text-danger">21</i>
-                          <i class="fas fa-comment-alt yellow">41</i>
+                          <i class="fas fa-comment-alt">41</i>
                           <i class="fas fa-trash-alt"></i>
                           <i class="fas fa-share"></i>
                         </div>
@@ -203,27 +208,6 @@
     </div>
   </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -235,30 +219,7 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/9700a5577c.js" crossorigin="anonymous"></script>
-
-  <!-- Transparent Nav Bar & Current Nav link background switch -->
-
-  <script>
-
-    const navBar = document.getElementById('page-header');
-
-    let scrolled = false;
-
-    window.onscroll = function () {
-      if (window.pageYOffset > 100) {
-        navBar.classList.remove('bg-dark');
-        navBar.classList.add('nav-transparent');
-
-      }
-
-      else {
-
-        navBar.classList.add('bg-dark');
-        scrolled = false;
-
-      }
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>

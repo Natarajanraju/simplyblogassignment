@@ -190,10 +190,7 @@ p
 #login .left i
 {
   display: block;
-  margin-bottom: 2rem;
-  
-  
-  
+  margin-bottom: 2rem;  
 }
 
 #login .left .form-wrap
@@ -201,8 +198,6 @@ p
   background-color: rgba(0,0,0, 0.15);
   width: 500px;   
   z-index: 10;
-  
-
 }
 
 #login .left .form-wrap input:not(.btn),
@@ -237,8 +232,6 @@ p
   background-size: 3000px;
   background-position: center;
   mix-blend-mode: screen;
-  
-
 }
 
 #login .right
@@ -359,42 +352,24 @@ p
   position: relative;
 }
 
+#blog .card-header,
+#blog .card-footer
+{
+  background-color: rgba(255,174,0,0.3);
+}
+
 #blog article:nth-child(odd)
 {
   border-left: var(--primary-color) 10px solid;
   position: relative;
+  box-shadow: 10px 5px 10px 5px grey;  
 }
 
 #blog article:nth-child(even)
 {
   border-right: var(--primary-color) 10px solid;
+  box-shadow: 10px 5px 10px 5px grey;
 }
-
-#blog::before
-{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 25px;
-  top: 0;
-  left: 0;
-  background-color: black;
-  padding: 0.5rem;
-}
-
-#blog::after
-{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 25px;
-  top: 0;
-  right: 0;
-  background-color: black;
-  padding: 0.5rem;
-}
-
-
 
 #blog .article1{  background: url('./img/blog/article1.jpg') no-repeat center center/cover;}
 #blog .article2{  background: url('./img/blog/article2.webp') no-repeat center center/cover;}
@@ -416,7 +391,8 @@ p
 
 #create_card
 {
-  background-color: rgba(255, 174, 0,0.25);
+  background-color: rgba(255, 174, 0,0.25);  
+  border: var(--primary-color) 2px solid;
 }
 
 #manage_card .article6{  background: url('./img/blog/article6.webp') no-repeat center center/cover;}
@@ -446,7 +422,11 @@ p
   height: 0%;
 }
 
-
+#post_manage #manage_card #accordion_post .card .card-header,
+#post_manage #manage_card #accordion_post .card .card-footer
+{
+  background-color: rgba(255, 174, 0,0.25);  
+}
 .juggler
 {
   position: absolute;

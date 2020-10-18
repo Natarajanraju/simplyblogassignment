@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./mobile.css" media="screen and (max-width:768px)">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="./tab.css">
 
 
   <title>Gamerhub | Loginpage</title>
@@ -25,14 +25,16 @@
         <form>
           <div class="form-group">
             <label for="name" class="font-weight-bold">Username:</label>
-            <input type="text" class="form-control" placeholder="John">
+            <input type="text" class="form-control" placeholder="John" id="userName">
+            <span id="errorMessageName" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label for="password" class="font-weight-bold">Password:</label>
-            <input type="password" class="form-control" placeholder="Enter your password">
+            <input type="password" class="form-control" placeholder="Enter your password" id="userPassword">
+            <span id="errorMessagePassword" class="text-danger"></span>
           </div>
           <div class="btn-group mt-2 w-100">
-            <a class="btn btn-dark btn-hover" href="index.html">Login</a>
+            <input type="button" class="btn btn-dark btn-hover" id="userLogin" onClick="validateUser()" value="Login">
           </div>
           <div class="btn-group mt-2 w-100">
             <input type="button" class="btn btn-warning border-dark btn-hover" name="forgot" value="Forgot password">
@@ -77,6 +79,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9700a5577c.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
